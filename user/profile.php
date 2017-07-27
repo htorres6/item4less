@@ -43,8 +43,8 @@
 <!--NAV BAR MENU-->
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#"><b>Products</b></a>
   <a href="../user/edit_profile.php"><b>Edit Profile</b></a>
-  <a href="../user/profile.php"><b>Profile</b></a>
   <a href="#"><b>Contact</b></a>
 </div>
 <div id="main">
@@ -106,7 +106,7 @@
 <div class="container">
   <div class="row" align="right">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <img src="../update/user_photos<?php echo $photo;?>" width="100" height="100" class="img-circle"><br>
+      <img src="../update/<?php echo $photo;?>" width="100" height="100" class="img-circle"><br>
 
 <!--WELCOME BACK "user" MSG-->
 <?php Session::display_message(); ?>

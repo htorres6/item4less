@@ -8,7 +8,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Profile</title>
+    <title>Edit Profile</title>
     
 <!--JQUERY CORE-->
       <script
@@ -125,7 +125,7 @@ if ($row2= $result2->fetch_object()) {
 <div class="container">
   <div class="row" align="center">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <img src="../update/user_photos<?php echo $photo;?>" width="100" height="100" class="img-circle"><br>
+      <img src="../update/<?php echo $photo;?>" width="100" height="100" class="img-circle"><br>
 
 <!--WELCOME BACK "user" MSG-->
 <?php Session::display_message(); ?>
