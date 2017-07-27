@@ -1,0 +1,90 @@
+ /** This function outputs the HTML & CSS login Form **/
+
+body {
+        background-color: #B06666;
+    }
+form {
+    border: 3px solid black;
+    width: 40%;
+    margin: 0px 0px 0px 380px;
+}
+h1 {
+    color: black;
+    background-color: #C38181;
+    border-color: black;
+    border-style: double;
+    border-width: 15px;
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    border-color: black;
+}
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    border-color: black;
+}
+button {
+    background-color: #4CAF50;
+    color: black;
+    padding: 14px 20px;
+    margin-left: 200px;
+    margin: 8px 0;
+    border-color: black;
+    cursor: pointer;
+    width: 100%;
+}
+button:hover {
+    opacity: 0.8;
+}
+.signupbtn {
+    width: auto;
+    margin-left: 55px;
+    padding: 10px 80px;
+    background-color: #f44336;
+}
+.signupbtn:hover {
+    opacity: 0.8;
+}
+.imgcontainer {
+    background-color: #450808;
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+}
+img.avatar {
+    background-color: #716B74;
+    width: 30%;
+    border-radius: 35%;  
+}
+.avatar:hover {
+    border: solid yellow;
+}
+.container {
+    background-color: ;
+    padding: 8px;
+}
+span.psw {
+    float: right;
+    padding-top: 16px;  
+}
+
+/* Different styles for span and cancel button on extra small screens */
+
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}

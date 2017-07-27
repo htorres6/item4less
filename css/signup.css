@@ -1,0 +1,78 @@
+/** This function outputs the HTML & CSS login Form **/
+
+body {
+    background-color: #B06666;
+    background-image: url("../beerrunners_main/product_image/coconut_tree.png");
+}
+h1 {
+    padding-bottom: px;
+}
+form {
+    border: 3px solid black;
+    width: 40%;
+    margin: 0px 0px 0px 380px;
+    padding-bottom: 27px;
+}
+img.avatar {
+    background-color: #716B74;
+    width: 40%;
+    border-radius: 50%;
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    border-color: black;
+}
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    border-color: black;
+}
+button {
+    background-color: #4CAF50;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+button:hover {
+    opacity: 0.8;
+}
+.cancelbtn {
+    width: auto;
+    margin-left: 0px;
+    padding: 10px 50px;
+    background-color: #f44336;
+}
+.container {
+    background-color: #B06666;
+    padding: 16px;
+    margin: 0px 0px 0px 0px;
+}
+span.psw {
+    float: right;
+    padding-top: 16px;
+    padding-right: 0px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
