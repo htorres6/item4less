@@ -109,21 +109,32 @@ if ($row2= $result2->fetch_object()) {
 <div class="container">
   <div class="row" align="center">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <label style="font-size: 25px; background-color: orange;">Edit Profile</label>
+      <label style="font-size: 25px; background-color: #d7e222">Edit Profile</label>
     </div>
   </div>
 </div>
 <script>
+// Document . ready function 
   $(function(){
+                          //  . FUNCTIONALITY TAKES PLACE // OBJECT ORIENTED
     var photo_name= $('#photo').val();
     //alert(photo_name);
+                                //THIS o CAN BE YOUR vARIABLe
+    $('#edit_form').submit(function(o){
+      if (!confirm("Are you sure you want to update?")) {
+        o.preventDefault();
+      }
+    });
   });
+
+
+
 </script>
                                     
 <!-- ACCOUNT MANAGE FORM START***             ONLY USE WITH 'PHOTOS'-->
-<form action="../update/user_update_data.php" method="POST" enctype="multipart/form-data">
+<form action="../update/user_update_data.php" method="POST" id="edit_form" enctype="multipart/form-data">
 <div class="container">
-  <div class="row" align="center">
+  <div class="row" align="right">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <img src="../update/<?php echo $photo;?>" width="100" height="100" class="img-circle"><br>
 
@@ -139,40 +150,41 @@ if ($row2= $result2->fetch_object()) {
 </div> 
 <br>
 <div class="container">
-  <div class="row" align="center">
+  <div class="row" align="right">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <label style="color: green;">First Name:</label><br>
+      <label style="color: black;"><b>First Name:</b></label><br>
       <input type="text" name="first_name" value="<?php echo $fname;?>" required>
 
       <br><br>
 
-      <label style="color: green;">Last Name:</label><br>
+      <label style="color: black;"><b>Last Name:</b></label><br>
       <input type="text" name="last_name" value="<?php echo $lname;?>" required>
 
       <br><br>
 
-      <label style="color: green;">Email:</label><br>
+      <label style="color: black;"><b>Email:</b></label><br>
       <input type="text" name="email" value="<?php echo $email;?>" required>
 
       <br><br>
     </div>
   </div>
 
-  <div class="row" align="center">
+  <div class="row" align="right">
     <div class="col-md-12">
       <input type="submit" name="submit" value="update">
+
+      <br><br>
     </div>
   </div>
 </div>
 </form>
 
 <!--END OF ACCOUNT MANAGE FORM-->
-
-
+<!-- <button onclick="alert('It goes')">go</button>
+ -->
 
 
  <script src="../bootstrap/js/bootstrap.js"></script>
-
 </body>
 </html>
 

@@ -42,6 +42,8 @@ class Object {
 
 		if (!$db->query($sql)) {
 			die("update FAILED ... " . $db->conn->error);
+		}else{
+			return true;
 		}
 	}
 

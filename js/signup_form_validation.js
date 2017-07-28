@@ -38,10 +38,10 @@ $(function(){
 
 
 
-	form.submit(function(e){
+	form.submit(function(error){
         if (password.val() != confirm_password.val()) {
             password_error.html('YOUR PASSWORD MUST MATCH');
-            e.preventDefault();
+            error.preventDefault();
         }
 
 		if (!validatedcommSeptEmail(email.val())) {

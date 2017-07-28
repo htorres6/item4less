@@ -53,13 +53,34 @@
 <!--NAV BAR MENU-->
 
 
+<script>
+  $(function(){
+    var photo_name= $('#photo').val();
+    //alert(photo_name);
+  });
+</script>
+
+<?php 
+  $id=$_SESSION['user_id'];
+  
+  $sql="SELECT photo_path FROM photos WHERE user_id='$id'";
+  // everything from the database will be stuffed inside the query result
+  $result=$db->query($sql);
+  while ($row=$result->fetch_object()) {
+    $photo=$row->photo_path;
+  }
+
+
+?>
+
 <!--BUTTONS IN ACTION-->
 <div class="container">
   <div class="row" align="right">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <!-- <a href="../admin/product_insert.php" class="btn btn-primary">Products</a> -->
 
-      <a href="../logout/logout_page_data.php" class="btn btn-danger">Logout</a>
+      <span><a href="../logout/logout_page_data.php" class="btn btn-danger">Logout</a>
+      <img src="../update/<?php echo $photo;?>" width="100" height="100" class="img-circle"><br></span>
       <!-- <a href="../admin/all_products.php" class="btn btn-default">All products</a><br> -->
     </div>
   </div>
@@ -85,18 +106,10 @@
 <div class="container">
   <div class="row" align="center">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <label style="font-size: 25px; background-color: orange;">PROFILE</label>
+      <label style="font-size: 25px; background-color: #d7e222">PROFILE</label>
     </div>
   </div>
 </div>
-
-
-<script>
-  $(function(){
-    var photo_name= $('#photo').val();
-    //alert(photo_name);
-  });
-</script>
 
 
 
@@ -106,7 +119,7 @@
 <div class="container">
   <div class="row" align="right">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <img src="../update/<?php echo $photo;?>" width="100" height="100" class="img-circle"><br>
+      
 
 <!--WELCOME BACK "user" MSG-->
 <?php Session::display_message(); ?>

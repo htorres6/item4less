@@ -70,7 +70,7 @@
 
 <!--NAV BAR MENU-->
 
-<div class="container">
+<!-- <div class="container">
   <div class="row" align="center">
     <div class="col-xs-12 col-ms-12 col-md-12 col-lg-12">
       <form class="navbar-form navbar-right">
@@ -85,7 +85,7 @@
       </form>    
     </div>
   </div>
-</div>
+</div> -->
 
 
 
